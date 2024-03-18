@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.container img {
+    width: 588px;
+    height: 1117px;
+    align-self: self-start;
+}
+
+.container form .btnEntrar {
+    background-color: #3D7CA0;
+    height: 65px;
+    width: 215px;
+    border-radius: 20px;
+    border: 0;
+}
