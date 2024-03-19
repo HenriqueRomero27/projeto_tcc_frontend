@@ -1,5 +1,6 @@
 import react from 'react'
 import "./Login.css"
+import "../root.css"
 import Dog from '../assets/dog.svg'
 
 function Login() {

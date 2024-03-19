@@ -21,3 +21,13 @@
     border-radius: 20px;
     border: 0;
 }
+
+.container form label {
+    font-size: 22px;
+}
+
+.container form input {
+    height: 46px;
+    border: 1px solid #a7a7a7;
+    border-radius: 12px;
+}
