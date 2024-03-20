@@ -1,33 +1,150 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    padding-right: 150px;
+}
+  
+.image-container {
+    margin-right: 20px;
 }
 
-.container img {
-    width: 588px;
-    height: 1117px;
-    align-self: self-start;
+img {
+    height: 100vh;
 }
 
-.container form .btnEntrar {
-    background-color: #3D7CA0;
-    height: 65px;
-    width: 215px;
-    border-radius: 20px;
-    border: 0;
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    width: 450px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.container form label {
-    font-size: 22px;
+.form .logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.container form input {
-    height: 46px;
-    border: 1px solid #a7a7a7;
-    border-radius: 12px;
+.form .logo-container img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.form h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+  
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+  
+.form button:hover {
+    background-color: #0056b3;
+}
+
+.form .btnEntrar {
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: linear-gradient(105deg, #EC2F0E 34.61%, #FFBE00 65.39%);
+}
+
+/* Login.css */
+
+/* Adiciona estilos para a mensagem "ou entre com" */
+.or {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+  
+  /* Estilos para os botões sociais */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+}
+  
+.social-buttons button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.btnGoogle {
+    background-color: #DB4437;
+    color: #fff;
+}
+  
+.btnFacebook {
+    background-color: #3B5998;
+    color: #fff;
+}
+  
+.create-account {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+  
+.create-account .emphasis {
+    font-weight: bold;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      padding: 40px;
+    }
+  }
+  
+  /* Celulares (até 767px) */
+@media (max-width: 767px) {
+    .container {
+      padding: 40px;
+    }
+    .form {
+      max-width: 100%;
+    }
 }
