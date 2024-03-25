@@ -1,0 +1,65 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(118, 118, 118, 0.40);
+    background: rgba(234, 232, 232, 0.76);
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer .line {
+    width: 944.002px;
+    height: 1px;
+    background: #6E6D6D;
+}
+
+.footer h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer button {
+    font-size: 18px;
+    width: 232px;
+    height: 36px;
+    border-radius: 12px;
+    border: 1px solid rgba(118, 118, 118, 0.40);
+    margin-bottom: 20px;
+}
+
+.footer #logo {
+    margin-left: 20px;
+}
+
+.content {
+    display: flex;
+    padding: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .links {
+    display: flex;
+    margin-left: 156px;
+}
+
+.content .links .link {
+    display: flex;
+    flex-direction: column;
+    max-width: 160px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 60px;
+}
+
+.content .links .link p.title {
+    margin-bottom: 14px;
+}
+
+.footer #copy {
+    margin-top: 20px;
+    font-size: 12px;
+}
