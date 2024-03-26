@@ -6,8 +6,9 @@
     background: rgba(234, 232, 232, 0.76);
     padding: 20px;
     width: 100%;
-    position: fixed;
     bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
 .footer .line {

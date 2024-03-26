@@ -5,7 +5,7 @@
 }
 
 .page {
-  padding: 2%;
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
