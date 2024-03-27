@@ -29,7 +29,7 @@ function Header() {
                 <p>Blog</p>
                 <p>Doar</p>
             </div>
-            <div className="line"></div>
+            <div className="line" id="second_line"></div>
         </div>
     )
 }

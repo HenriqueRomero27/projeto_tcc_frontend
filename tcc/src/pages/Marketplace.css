@@ -7,13 +7,14 @@
 .marketplace_container #banner {
     width: 100%;
     height: 658px;
-    flex-shrink: 0;
+    margin-top: 80px;
 }
 
 .marketplace_container .sections {
     display: flex;
     max-width: 100%;
     justify-content: center;
+    margin-bottom: 86px;
 }
 
 .marketplace_container .sections .card {
@@ -38,7 +39,27 @@
     padding-left: 30px;
 }
 
+.marketplace_container .sections .card h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.marketplace_container .sections .card a {
+    font-size: 18px;
+    color: black;
+}
+
 .marketplace_container .sections .card img {
     width: 350px;
 }
 
+.marketplace_container h2 {
+    text-align: center;
+}
+
+.marketplace_container .products {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin-top: 50px;
+}
