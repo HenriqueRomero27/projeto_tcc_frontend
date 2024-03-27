@@ -9,13 +9,16 @@
     position: fixed;
     width: 100%;
     z-index: 1000;
-    max-width: 1200px;
+    background-color: #fff;
+    padding-top: 20px;
 }
 
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .container .searchBox {

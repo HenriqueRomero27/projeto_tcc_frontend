@@ -1,5 +1,6 @@
 .marketplace_container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -9,18 +10,35 @@
     flex-shrink: 0;
 }
 
-.marketplace_container .card {
+.marketplace_container .sections {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.marketplace_container .sections .card {
     background-color: #BCD3E0;
     border: 0;
     border-radius: 12px;
     padding-top: 30px;
-    padding-left: 20px;
-    width: 574px;
-    height: 300px;
     display: flex;
     flex-direction: column;
+    width: 350px;
 }
 
-.marketplace_container .card img {
-    
+.marketplace_container .sections #toys_card {
+    margin-right: 30px;
 }
+
+.marketplace_container .sections #products_card {
+    margin-left: 30px;
+}
+
+.marketplace_container .sections .card h4, .marketplace_container .sections .card a {
+    padding-left: 30px;
+}
+
+.marketplace_container .sections .card img {
+    width: 350px;
+}
+

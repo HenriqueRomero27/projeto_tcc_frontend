@@ -13,12 +13,16 @@ function Marketplace() {
             <div className="marketplace_container">
                 <img src={Banner} alt="Banner" id="banner" />
                 <div className="sections">
-                    <div className="card">
+                    <div className="card" id="toys_card">
                         <h4>Brinquedos</h4>
                         <a href="">Explorar</a>
                         <img src={Toys} alt="Toys" id="img_toys" />
                     </div>
-                    <img src={Products} alt="Products" id="img_products" />
+                    <div className="card" id="products_card">
+                        <h4>Brinquedos</h4>
+                        <a href="">Explorar</a>
+                        <img src={Products} alt="Products" id="img_products" />
+                    </div>
                 </div>
             </div>
             {/* <Footer /> */}

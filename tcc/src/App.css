@@ -5,7 +5,20 @@
 }
 
 .page {
-  padding-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.page header Header {
+  width: 100vw;
+  align-self: center;
+}
+
+.page main {
+  margin-top: 20px;
+}
+
+.page footer {
+  margin-top: 20px;
 }
