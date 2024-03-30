@@ -1,0 +1,48 @@
+.pet-card {
+    display: flex;
+    /* justify-content: center; */    
+    flex-direction: column;
+    width: 280px;
+    border: 1px solid #000;
+    border-radius: 12px;
+}
+
+.pet-card .petPicture {
+    width: 100%;
+}
+
+.pet-card .containers {
+    padding: 0 10px 10px;
+}
+
+.pet-card .container1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;   
+    margin-top: 10px;
+}
+
+.pet-card .container1 p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.pet-card .container1 .petName .petGender {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.pet-card .container1 .favoritePet {
+    width: 20px;
+}
+
+.pet-card .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 10px;
+}
+

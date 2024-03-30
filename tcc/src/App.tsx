@@ -2,7 +2,8 @@ import './root.css'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Marketplace from './pages/Marketplace'
+// import Marketplace from './pages/Marketplace'
+import FindPet from './pages/FindPet'
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
         <Header />
       </header>
       <main>
-        <Marketplace />
+        <FindPet />
       </main>
       <footer>
         <Footer />

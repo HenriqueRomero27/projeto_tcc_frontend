@@ -1,0 +1,64 @@
+.findPet-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 155px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.findPet-container .title {
+    font-weight: 500;
+}
+
+.findPet-container #category {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.findPet-container .actionsButtons {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.findPet-container .actionsButtons button {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px;
+    padding-right: 5px;
+}
+
+.findPet-container .actionsButtons #filter, .findPet-container .actionsButtons #dogs, .findPet-container .actionsButtons #cats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.findPet-container .actionsButtons #filter img {
+    margin-right: 5px;
+    width: 15px;
+}
+
+.findPet-container .actionsButtons #dogs img, .findPet-container .actionsButtons #cats img {
+    margin-right: 5px;
+    width: 20px;
+}
+
+.findPet-container .actionsButtons #cats {
+    border-color: #406DAF;
+}
+
+.findPet-container .actionsButtons #dogs {
+    border-color: #EC2F0E;
+}
+ 
+.findPet-container .pets {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+}
+
