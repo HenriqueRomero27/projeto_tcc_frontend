@@ -30,6 +30,16 @@ function FindPet() {
                     <PetCard name={"Tanio"} gender={Male} favorite={Heart} age={10} location={"São Paulo"} picture={DogProfileImage}/>
                     <PetCard name={"Jonas"} gender={Male} favorite={Heart} age={10} location={"Flamengo"} picture={DogProfileImage}/>
                     <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
                 </div>
                 
             </div>

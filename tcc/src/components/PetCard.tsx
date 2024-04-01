@@ -1,5 +1,5 @@
 import "./PetCard.css"
-
+import "./DogImage"
 interface props {
     name: string,
     age: number,
