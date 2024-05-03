@@ -7,6 +7,7 @@
     width: 25%;
     /* padding: 10px; Adicione algum preenchimento para espaçamento interno (opcional) */
     margin-bottom: 50px;
+    position: relative; /* Adicionado */
 }
 
 .pet-card .images .petPicture {
@@ -14,11 +15,45 @@
 }
 
 .pet-card .images .favorite {
-    top: 0;
-    left: 0;
     position: absolute;
-    flex: 1;
+    top: 0px; /* Ajuste conforme necessário */
+    left: 0px; /* Ajuste conforme necessário */
+    z-index: 1; /* Ensure the like button stays in front */
+    border: 0;
+    background-color: transparent;
 }
+
+/* Aumentar o tamanho do ícone */
+.pet-card .images .favorite .svg-inline--fa {
+    font-size: 30px; /* Altere o tamanho do ícone conforme necessário */
+}
+
+
+.pet-card .pet-informations .petNameLocation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-card .pet-informations .petName {
+    display: flex;
+    justify-content: center;
+}
+
+.pet-card .pet-informations .petName img {
+    margin-left: 8px;
+}
+
+.pet-card .images .favorite {
+    position: absolute;
+    top: 10px; /* Ajuste conforme necessário */
+    left: 10px; /* Ajuste conforme necessário */
+    z-index: 1; /* Ensure the like button stays in front */
+    width: 100px; /* Definindo a largura do botão */
+    height: 100px; /* Definindo a altura do botão */
+}
+
 
 .pet-card .pet-informations {
     padding: 18px;
@@ -61,4 +96,8 @@
 
 .pet-card .pet-informations .containerBday p {
     margin-left: 5px;
+}
+
+.favorite.active {
+    color: red;
 }
