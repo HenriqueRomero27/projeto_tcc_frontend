@@ -25,8 +25,8 @@ function FindPet() {
                 <div className="line"></div>
                 
                 <div className="pets">
-                    <PetCard name={"Pudim"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Amora"} gender={Female} favorite={Heart} age={5} location={"Minas Gerais"} picture={DogProfileImage}/>
+                    <PetCard name={"Pudim"} gender={Male} favorite={Heart} bday={"Fev 2022"} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    {/* <PetCard name={"Amora"} gender={Female} favorite={Heart} age={5} location={"Minas Gerais"} picture={DogProfileImage}/>
                     <PetCard name={"Tanio"} gender={Male} favorite={Heart} age={10} location={"São Paulo"} picture={DogProfileImage}/>
                     <PetCard name={"Jonas"} gender={Male} favorite={Heart} age={10} location={"Flamengo"} picture={DogProfileImage}/>
                     <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
@@ -39,7 +39,7 @@ function FindPet() {
                     <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
                     <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
                     <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/> */}
                 </div>
                 
             </div>

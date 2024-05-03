@@ -1,49 +1,64 @@
 .pet-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
     border-radius: 12px;
-    width: 18%;
+    width: 25%;
     /* padding: 10px; Adicione algum preenchimento para espaçamento interno (opcional) */
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
-.pet-card .petPicture {
+.pet-card .images .petPicture {
     width: 100%;
 }
 
-.pet-card .containers {
-    padding: 0 10px 10px;
+.pet-card .images .favorite {
+    top: 0;
+    left: 0;
+    position: absolute;
+    flex: 1;
 }
 
-.pet-card .container1 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;   
+.pet-card .pet-informations {
+    padding: 18px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: -50px;
+    width: 280px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pet-card .pet-informations .petLocation {
     margin-top: 10px;
+    font-size: 18px;
 }
 
-.pet-card .container1 p {
+.pet-card .pet-informations .petName .petGender {
+    width: 30px;
+}
+
+.pet-card .pet-informations .petName {
+    font-size: 22px;
     font-weight: bold;
-    font-size: 20px;
-}
-
-.pet-card .container1 .petName .petGender {
-    width: 20px;
-    margin-left: 10px;
 }
 
 .pet-card .container1 .favoritePet {
     width: 20px;
 }
 
-.pet-card .container2 {
+.pet-card .pet-informations .containerBday {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    justify-content: center;
     width: 100%;
     margin-top: 10px;
 }
 
+.pet-card .pet-informations .containerBday p {
+    margin-left: 5px;
+}
