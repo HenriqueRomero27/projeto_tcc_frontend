@@ -8,10 +8,12 @@ import Hidradante from "../assets/hidradante.svg"
 import Perfume from "../assets/perfume.svg"
 import Protetor from "../assets/protetor.svg"
 import KitPastaEscova from "../assets/kitEscova.svg"
+import Header from "../components/Header"
 
 function Marketplace() {
     return (
         <>
+            <Header />
             <div className="marketplace_container">
                 <img src={Banner} alt="Banner" id="banner" />
                 <div className="sections">
