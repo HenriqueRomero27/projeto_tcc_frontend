@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes as ReactRoutes} from "react-router-dom"
-import Home from "./pages/Home"
-import FindPet from "./pages/FindPet"
-import Marketplace from "./pages/Marketplace"
+import Home from "./pages/Home/Home"
+import FindPet from "./pages/FindPet/FindPet"
+import Marketplace from "./pages/Marketplace/Marketplace"
 
 export const Routes = () => {
     return(
