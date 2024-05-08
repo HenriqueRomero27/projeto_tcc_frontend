@@ -1,14 +1,15 @@
-import "../root.css"
+import "../../root.css"
 import "./Marketplace.css"
 import ProductCard from "../../components/ProductCard/ProductCard"
-import Banner from "../assets/bannerMarketplace.svg"
-import Toys from "../assets/toys.svg"
-import Products from "../assets/products.svg"
-import Hidradante from "../assets/hidradante.svg"
-import Perfume from "../assets/perfume.svg"
-import Protetor from "../assets/protetor.svg"
-import KitPastaEscova from "../assets/kitEscova.svg"
+import Banner from "../../assets/bannerMarketplace.svg"
+import Toys from "../../assets/toys.svg"
+import Products from "../../assets/products.svg"
+import Hidradante from "../../assets/hidradante.svg"
+import Perfume from "../../assets/perfume.svg"
+import Protetor from "../../assets/protetor.svg"
+import KitPastaEscova from "../../assets/kitEscova.svg"
 import Header from "../../components/Header/Header"
+import Footer from "../../components/Footer/Footer"
 
 function Marketplace() {
     return (
@@ -37,6 +38,7 @@ function Marketplace() {
                     <ProductCard name={"Kit - Pasta de Dente e Escova"} picture={KitPastaEscova} price={35.60} description={"A MELHOR OPÇÃO PARA A SAÚDE BUCAL DO SEU PET!"} />
                 </div>
             </div>
+            <Footer />
         </>
     )
 }

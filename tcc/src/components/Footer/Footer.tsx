@@ -1,11 +1,16 @@
 import './Footer.css'
-import Logo from "../assets/LOGO.svg"
+import Logo from "../../assets/LOGO.svg"
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
         <div className="footer">
             <h2>Deseja adotar um animalzinho?</h2>
-            <button type='button' id='adoptAnimal'>Adotar</button>
+            <Link to="/findPet">
+                <div>
+                    <button type='button' id='adoptAnimal'>Adotar</button>
+                </div>
+            </Link>
             <div className="line"></div>
             <div className="content">
                 <img src={Logo} id="logo" />

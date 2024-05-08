@@ -1,10 +1,10 @@
-import '../root.css'
+import '../../root.css'
 import './Header.css'
-import Logo from '../assets/LOGO.svg'
-import Search from '../assets/search.svg'
-import Heart from '../assets/heart.svg'
-import ShoppingBag from '../assets/shopping_bag.svg'
-import User from '../assets/user.svg'
+import Logo from '../../assets/LOGO.svg'
+import Search from '../../assets/search.svg'
+import Heart from '../../assets/heart.svg'
+import ShoppingBag from '../../assets/shopping_bag.svg'
+import User from '../../assets/user.svg'
 
 import { Link } from 'react-router-dom';
 
@@ -28,7 +28,7 @@ function Header() {
                 </div>
                 <div className="subcontainer">
                     <p>Ongs / Casas de Doação</p>
-                    <Link to="/marketplace">Marketplace</Link>
+                    <Link to="/marketplace" style={{textDecoration: 'none'}}><p>Marketplace</p></Link>
                     <p>Campanhas</p>
                     <p>Doadores</p>
                     <p>Blog</p>

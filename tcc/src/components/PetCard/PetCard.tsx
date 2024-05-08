@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import Cake from "../assets/cake.svg";
+import Cake from "../../assets/cake.svg";
 import './PetCard.css';
 
 interface Props {
