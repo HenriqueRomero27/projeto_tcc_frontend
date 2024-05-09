@@ -1,6 +1,6 @@
 import "./FindPet.css"
 import "../../root.css"
-import PetCard from "../../components/PetCard/PetCard"
+import { PetCard } from "../../components/PetCard/PetCard"
 import CatEmoji from "../../assets/catEmoji.svg"
 import DogEmoji from "../../assets/dogEmoji.svg"
 import Filter from "../../assets/filter.svg"
