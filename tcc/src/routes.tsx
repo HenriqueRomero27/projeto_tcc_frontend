@@ -8,7 +8,7 @@ export const Routes = () => {
         <Router>
             <ReactRoutes>
                 <Route path="/" element={<Home />} />
-                <Route path="/findPet" element={<FindPet />} />
+                <Route path="/animal" element={<FindPet />} />
                 <Route path="/marketplace" element={<Marketplace />} />
             </ReactRoutes>
         </Router>

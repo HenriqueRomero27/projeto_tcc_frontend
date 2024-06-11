@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import "./FindPet.css"
 import "../../root.css"
 import { PetCard } from "../../components/PetCard/PetCard"
@@ -10,9 +12,14 @@ import Heart from "../../assets/heart.svg"
 import DogProfileImage from "../../assets/dogProfileImage.svg"
 import Footer from "../../components/Footer/Footer"
 import Header from "../../components/Header/Header"
+import { PetData } from "../../interfaces/PetData"
+import { usePetDataMutate } from "../../hooks/usePetDataMutate"
+import { CreateModalPet } from "../../components/create-modal/CreateModalPet"
 
 
 function FindPet() {
+    const { data } = usePetDataMutate()
+    const [isModalOpen, setIsModalOpen] = useState(false)
     return (
         <>
             <Header />
@@ -28,21 +35,15 @@ function FindPet() {
                 <div className="line"></div>
                 
                 <div className="pets">
+                    {data?.map(petData => 
+                        <PetCard name={petData.name} 
+                        gender={petData.gender} 
+                        bday={petData.bday} 
+                        location={petData.location}
+                        petImage={petData.} />
+                    )}
+                    {isModalOpen && <CreateModalPet />}
                     <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    {/* <PetCard name={"Amora"} gender={Female} favorite={Heart} age={5} location={"Minas Gerais"} picture={DogProfileImage}/>
-                    <PetCard name={"Tanio"} gender={Male} favorite={Heart} age={10} location={"São Paulo"} picture={DogProfileImage}/>
-                    <PetCard name={"Jonas"} gender={Male} favorite={Heart} age={10} location={"Flamengo"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/>
-                    <PetCard name={"Jiorgio"} gender={Male} favorite={Heart} age={10} location={"Rio de Janeiro"} picture={DogProfileImage}/> */}
                 </div>
                 
             </div>
