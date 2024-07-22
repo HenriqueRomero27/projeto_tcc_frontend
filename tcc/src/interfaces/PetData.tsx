@@ -1,7 +1,8 @@
 export interface PetData {
     id?: number,
     name: string;
-    picture: string;
+    image: string;
+    bday: string;
     gender: string;
     breed: string;
     age: number;
@@ -10,5 +11,4 @@ export interface PetData {
     situation: string;
     behavior: string;
     location: string;
-    petImage: string;
 }

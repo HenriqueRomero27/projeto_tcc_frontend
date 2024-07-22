@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { usePetDataMutate } from "../../hooks/usePetData"
+import { usePetDataMutate } from "../../hooks/usePetDataMutate"
 import { PetData } from "../../interfaces/PetData"
 
 interface InputProps {
@@ -28,7 +28,8 @@ export function CreateModalPet() {
     const [situation, setSituation] = useState("")
     const [observation, setObservation] = useState("")
     const [behavior, setBehavior] = useState("")
-    const [petImage, setPetImage] = useState("")
+    const [image, setImage] = useState("")
+    const [bday, setBday] = useState("")
     const [location, setLocation] = useState("")
     const { mutate } = usePetDataMutate()
 
@@ -43,7 +44,8 @@ export function CreateModalPet() {
             situation,
             behavior,
             location,
-            petImage
+            bday,
+            image
         }
         mutate(petData)
     }
@@ -63,7 +65,8 @@ export function CreateModalPet() {
                     <Input label="Situação (Castrado)" value={situation} updateValue={setSituation} />
                     <Input label="Observação" value={observation} updateValue={setObservation} />
                     <Input label="Comportamento" value={behavior} updateValue={setBehavior} />
-                    <Input label="Foto do Pet" value={petImage} updateValue={setPetImage} />
+                    <Input label="Foto do Pet" value={image} updateValue={setImage} />
+                    <Input label="Foto do Pet" value={bday} updateValue={setBday} />
                 </form>
                 <button onClick={submit} className="btn-secondary">Cadastrar Pet</button>
             </div>

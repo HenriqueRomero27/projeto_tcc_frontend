@@ -1,25 +1,27 @@
-import { useState } from "react"
-
-import "./FindPet.css"
-import "../../root.css"
-import { PetCard } from "../../components/PetCard/PetCard"
-import CatEmoji from "../../assets/catEmoji.svg"
-import DogEmoji from "../../assets/dogEmoji.svg"
-import Filter from "../../assets/filter.svg"
-import Male from "../../assets/male.svg"
-import Female from "../../assets/female.svg"
-import Heart from "../../assets/heart.svg"
-import DogProfileImage from "../../assets/dogProfileImage.svg"
-import Footer from "../../components/Footer/Footer"
-import Header from "../../components/Header/Header"
-import { PetData } from "../../interfaces/PetData"
-import { usePetDataMutate } from "../../hooks/usePetDataMutate"
-import { CreateModalPet } from "../../components/create-modal/CreateModalPet"
-
+import { useState } from "react";
+import "./FindPet.css";
+import "../../root.css";
+import { PetCard } from "../../components/PetCard/PetCard";
+import CatEmoji from "../../assets/catEmoji.svg";
+import DogEmoji from "../../assets/dogEmoji.svg";
+import Filter from "../../assets/filter.svg";
+import Male from "../../assets/male.svg";
+import Female from "../../assets/female.svg";
+import Heart from "../../assets/heart.svg";
+import DogProfileImage from "../../assets/dogProfileImage.svg";
+import Footer from "../../components/Footer/Footer";
+import Header from "../../components/Header/Header";
+import { PetData } from "../../interfaces/PetData";
+import { usePetDataMutate } from "../../hooks/usePetDataMutate";
+import { CreateModalPet } from "../../components/create-modal/CreateModalPet";
 
 function FindPet() {
-    const { data } = usePetDataMutate()
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const { data } = usePetDataMutate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Verifica se data.data está definido antes de usar map
+    const petDataList = data?.data || [];
+
     return (
         <>
             <Header />
@@ -35,21 +37,24 @@ function FindPet() {
                 <div className="line"></div>
                 
                 <div className="pets">
-                    {data?.map(petData => 
-                        <PetCard name={petData.name} 
-                        gender={petData.gender} 
-                        bday={petData.bday} 
-                        location={petData.location}
-                        petImage={petData.} />
-                    )}
+                    {petDataList.map((petData: PetData) => (
+                        <PetCard
+                            key={petData.id}
+                            name={petData.name} 
+                            gender={petData.gender} 
+                            bday={petData.bday} 
+                            location={petData.location}
+                            image={petData.image}
+                        />
+                    ))}
                     {isModalOpen && <CreateModalPet />}
-                    <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} picture={DogProfileImage}/>
+                    <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} image={DogProfileImage}/>
                 </div>
                 
             </div>
             <Footer />
         </>
-    )
+    );
 }
 
-export default FindPet
+export default FindPet;

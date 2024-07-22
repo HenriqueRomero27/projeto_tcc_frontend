@@ -52,17 +52,17 @@ import "./PetCard.css";
 interface props {
     name: string;
     bday: string;
-    picture: string;
+    image: string;
     gender: string;
     location: string;
 }
 
-export const PetCard = ({name, gender, bday, location, picture}: props): JSX.Element => {
+export const PetCard = ({name, gender, bday, location, image}: props): JSX.Element => {
   return (
     <div className="box">
       <div className="adoo">
         <div className="overlap-group">
-          <img className="imagem-animal" alt="Imagem animal" src={picture} />
+          <img className="imagem-animal" alt="Imagem animal" src={image} />
           <div className="rectangle" />
           <div className="nome-do-animal">{name}</div>
           <p className="localiza-oanimal"> {location}</p>
