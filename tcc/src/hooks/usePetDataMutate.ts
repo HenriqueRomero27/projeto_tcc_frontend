@@ -1,6 +1,6 @@
 import axios, { AxiosPromise } from "axios"
 import { PetData } from "../interfaces/PetData"
-import { useMutation, useQuery, useQueryClient } from "react-query"
+import { useMutation, useQueryClient } from "react-query"
 
 const API_URL = "https://8080-henriquerom-tccbackendt-owhy9zf5cpz.ws-us115.gitpod.io"
 

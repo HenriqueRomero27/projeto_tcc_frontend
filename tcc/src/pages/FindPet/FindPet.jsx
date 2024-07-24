@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./FindPet.css";
 import "../../root.css";
 import { PetCard } from "../../components/PetCard/PetCard";
@@ -11,9 +11,10 @@ import Heart from "../../assets/heart.svg";
 import DogProfileImage from "../../assets/dogProfileImage.svg";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-import { PetData } from "../../interfaces/PetData";
+// import { PetData } from "../../interfaces/PetData";
 import { usePetDataMutate } from "../../hooks/usePetDataMutate";
 import { CreateModalPet } from "../../components/create-modal/CreateModalPet";
+import { useParams } from "react-router-dom";
 
 function FindPet() {
     const { data } = usePetDataMutate();
@@ -21,6 +22,22 @@ function FindPet() {
 
     // Verifica se data.data está definido antes de usar map
     const petDataList = data?.data || [];
+
+    const {id} = useParams()
+    const apiURL = import.meta.env.VITE_API
+    const [animal, setAnimal] = useState(null)
+
+    const getAnimal = async (url) => {
+        const res = await fetch(url)
+        const data = await res.json()
+
+        setAnimal(data)
+    }
+
+    useEffect(() =>{
+        const animalURL = `${apiURL}/animal/list`
+        getAnimal(animalURL)
+    }, [])
 
     return (
         <>
@@ -37,7 +54,7 @@ function FindPet() {
                 <div className="line"></div>
                 
                 <div className="pets">
-                    {petDataList.map((petData: PetData) => (
+                    {/* {petDataList.map((petData: PetData) => (
                         <PetCard
                             key={petData.id}
                             name={petData.name} 
@@ -47,7 +64,18 @@ function FindPet() {
                             image={petData.image}
                         />
                     ))}
-                    {isModalOpen && <CreateModalPet />}
+                    {isModalOpen && <CreateModalPet />} */}
+                    {animal && (
+                        <PetCard
+                            key={id}
+                            name={name} 
+                            gender={gender} 
+                            bday={bday} 
+                            location={location}
+                            image={image}
+                    />
+                    )}
+                    
                     <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} image={DogProfileImage}/>
                 </div>
                 
