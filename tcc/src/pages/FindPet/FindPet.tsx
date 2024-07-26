@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./FindPet.css";
 import "../../root.css";
-import { PetCard } from "../../components/PetCard/PetCard";
+import PetCard from "../../components/PetCard/PetCard";
 import CatEmoji from "../../assets/catEmoji.svg";
 import DogEmoji from "../../assets/dogEmoji.svg";
 import Filter from "../../assets/filter.svg";
@@ -11,34 +11,21 @@ import Heart from "../../assets/heart.svg";
 import DogProfileImage from "../../assets/dogProfileImage.svg";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
-// import { PetData } from "../../interfaces/PetData";
+import { PetData } from "../../interfaces/PetData";
 import { usePetDataMutate } from "../../hooks/usePetDataMutate";
 import { CreateModalPet } from "../../components/create-modal/CreateModalPet";
 import { useParams } from "react-router-dom";
+import { usePetData } from "../../hooks/usePetData";
 
 function FindPet() {
-    const { data } = usePetDataMutate();
+    const { data } = usePetData();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Verifica se data.data está definido antes de usar map
-    const petDataList = data?.data || [];
-
-    const {id} = useParams()
-    const apiURL = import.meta.env.VITE_API
-    const [animal, setAnimal] = useState(null)
-
-    const getAnimal = async (url) => {
-        const res = await fetch(url)
-        const data = await res.json()
-
-        setAnimal(data)
+    const handleOpenModal = () => {
+        setIsModalOpen(prev => !prev)
     }
 
-    useEffect(() =>{
-        const animalURL = `${apiURL}/animal/list`
-        getAnimal(animalURL)
-    }, [])
-
+    // Verifica se data.data está definido antes de usar map
     return (
         <>
             <Header />
@@ -53,8 +40,8 @@ function FindPet() {
 
                 <div className="line"></div>
                 
-                <div className="pets">
-                    {/* {petDataList.map((petData: PetData) => (
+                <div className="pets">                    
+                    {data?.map(petData =>
                         <PetCard
                             key={petData.id}
                             name={petData.name} 
@@ -63,22 +50,12 @@ function FindPet() {
                             location={petData.location}
                             image={petData.image}
                         />
-                    ))}
-                    {isModalOpen && <CreateModalPet />} */}
-                    {animal && (
-                        <PetCard
-                            key={id}
-                            name={name} 
-                            gender={gender} 
-                            bday={bday} 
-                            location={location}
-                            image={image}
-                    />
                     )}
-                    
                     <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} image={DogProfileImage}/>
                 </div>
-                
+                {isModalOpen && <CreateModalPet />}
+                <button onClick={handleOpenModal}>Novo</button>
+
             </div>
             <Footer />
         </>
