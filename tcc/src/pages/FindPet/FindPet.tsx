@@ -25,7 +25,7 @@ function FindPet() {
         setIsModalOpen(prev => !prev)
     }
 
-    // Verifica se data.data está definido antes de usar map
+    console.log(data)
     return (
         <>
             <Header />
@@ -51,7 +51,7 @@ function FindPet() {
                             image={petData.image}
                         />
                     )}
-                    <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} image={DogProfileImage}/>
+                    {/* <PetCard name={"Pudim"} gender={Male} bday={"Fev 2022"} location={"Rio de Janeiro"} image={DogProfileImage}/> */}
                 </div>
                 {isModalOpen && <CreateModalPet />}
                 <button onClick={handleOpenModal}>Novo</button>
@@ -60,6 +60,7 @@ function FindPet() {
             <Footer />
         </>
     );
+
 }
 
 export default FindPet;
