@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes as ReactRoutes} from "react-rout
 import Home from "./pages/Home/Home"
 import FindPet from "./pages/FindPet/FindPet"
 import Marketplace from "./pages/Marketplace/Marketplace"
+import Login from "./pages/Login/Login"
 
 export const Routes = () => {
     return(
@@ -10,6 +11,7 @@ export const Routes = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/animal" element={<FindPet />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/login" element={<Login />} />
             </ReactRoutes>
         </Router>
     )

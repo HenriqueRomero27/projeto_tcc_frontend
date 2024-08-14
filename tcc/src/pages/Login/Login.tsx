@@ -1,8 +1,8 @@
 import React from 'react';
 import './Login.css';
-import '../root.css';
-import Dog from '../assets/dog.svg';
-import Logo from '../assets/LOGO.svg';
+import '../../root.css';
+import Dog from '../../assets/dog.svg';
+import Logo from '../../assets/LOGO.svg';
 
 function Login() {
   return (
