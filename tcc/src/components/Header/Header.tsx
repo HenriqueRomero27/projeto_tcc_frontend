@@ -23,7 +23,9 @@ function Header() {
                     <div className="actions">
                         <img src={Heart} alt="favorites" id="favorites" />
                         <img src={ShoppingBag} alt="cart" id="cart" />
-                        <img src={User} alt="user" id="user" />
+                        <Link to="/login">
+                            <img src={User} alt="user" id="user" />
+                        </Link>
                     </div>
                 </div>
                 <div className="subcontainer">

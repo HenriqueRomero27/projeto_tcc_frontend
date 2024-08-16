@@ -12,6 +12,10 @@ export const Routes = () => {
                 <Route path="/animal" element={<FindPet />} />
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
+=======
+                {/* <Route path="/create-account" element={<CreateAccount />} /> */}
+>>>>>>> 4f4bdac (fix errors - 16/08)
             </ReactRoutes>
         </Router>
     )

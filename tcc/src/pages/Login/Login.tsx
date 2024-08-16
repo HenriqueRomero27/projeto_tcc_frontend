@@ -3,6 +3,10 @@ import './Login.css';
 import '../../root.css';
 import Dog from '../../assets/dog.svg';
 import Logo from '../../assets/LOGO.svg';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> 4f4bdac (fix errors - 16/08)
 
 function Login() {
   return (
@@ -26,7 +30,7 @@ function Login() {
             <button className="btnGoogle">Continuar com Google</button>
             <button className="btnFacebook">Continuar com Facebook</button>
           </div>
-          <p className="create-account">Ainda não tem uma conta?<span className="emphasis"> Crie uma agora</span>.</p>
+          <p className="create-account">Ainda não tem uma conta?<span className="emphasis"><Link to="/create-account"> Crie uma agora</Link></span></p>
         </form>
       </div>
     </div>
