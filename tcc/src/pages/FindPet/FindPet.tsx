@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./FindPet.css";
 import "../../root.css";
 import PetCard from "../../components/PetCard/PetCard";
@@ -8,10 +8,6 @@ import Filter from "../../assets/filter.svg";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import { CreateModalPet } from "../../components/create-modal/CreateModalPet";
-<<<<<<< HEAD
-import { useParams } from "react-router-dom";
-=======
->>>>>>> 4f4bdac (fix errors - 16/08)
 import { usePetData } from "../../hooks/usePetData";
 
 function FindPet() {

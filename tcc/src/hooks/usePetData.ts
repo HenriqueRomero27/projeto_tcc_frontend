@@ -2,7 +2,7 @@ import axios, { AxiosPromise } from "axios"
 import { PetData } from "../interfaces/PetData"
 import { useQuery } from "react-query"
 
-const API_URL = "https://8080-henriquerom-tccbackendt-pwd3ogyjupn.ws-us115.gitpod.io"
+const API_URL = "https://8080-henriquerom-backendmiau-il5zx4a5704.ws-us115.gitpod.io"
 
 const fetchData = async (): AxiosPromise<PetData[]> => {
     const response = axios.get(API_URL + "/animal")

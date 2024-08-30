@@ -32,7 +32,7 @@ function Header() {
                     <p>Ongs / Casas de Doação</p>
                     <Link to="/marketplace" style={{textDecoration: 'none'}}><p>Marketplace</p></Link>
                     <p>Campanhas</p>
-                    <p>Doadores</p>
+                    <Link to="/doadores" style={{textDecoration: "none"}}><p>Doadores</p></Link>
                     <p>Blog</p>
                     <p>Doar</p>
                 </div>

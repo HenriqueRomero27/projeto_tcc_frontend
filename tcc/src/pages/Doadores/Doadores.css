@@ -1,0 +1,214 @@
+/* Aplicando a fonte Poppins em todo o documento */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Terceira Seção */
+  .hero-image {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 1728px;
+    height: auto;
+  }
+  
+  /* Quarta Seção */
+  .donor-title {
+    padding: 20px;
+  }
+  
+  .donor-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* Quinta Seção */
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+  }
+  
+  .info-image {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .info-text h3 {
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .info-text p {
+    margin: 5px 0 0;
+  }
+  
+  /* Sexta Seção */
+  .collaborate-title {
+    padding: 20px;
+    margin-left: 30px;
+  }
+  
+  .collaborate-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* Sétima Seção - Botões */
+  .support-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .support-item {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .support-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .support-item.active {
+    background-color: #FFD700; /* Cor de destaque, ajuste conforme necessário */
+    border-color: #FFD700;
+    color: #000; /* Cor do texto quando o botão está ativo */
+  }
+  
+  
+  /* Oitava Seção */
+  .animal-title {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .animal-title h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* Nona Seção */
+  .animal-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em várias linhas se necessário */
+    justify-content: space-between;
+    padding: 20px;
+    margin: 0 50px;
+  }
+  
+  .animal-item {
+    position: relative;
+    width: 100%;
+    max-width: 332px;
+    height: 345px;
+    margin-bottom: 20px; /* Adiciona um espaço entre as linhas de itens */
+  }
+  
+  .animal-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .animal-info {
+    position: absolute;
+    bottom: 10px; /* Posiciona mais para baixo em relação à imagem */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ajusta para ocupar a largura total do item */
+    height: 40px; /* Ajusta a altura do container do texto */
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente para melhor legibilidade */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    padding: 0 10px; /* Adiciona um pouco de preenchimento lateral */
+  }
+  
+  /* Adicione isso ao seu CSS */
+  
+  section {
+    position: relative;
+  }
+  
+  /* Adicione isso ao seu CSS */
+  
+  .background-image {
+    position: fixed; /* Fixa a imagem de fundo para que ela não role com o conteúdo */
+    top: 100px; /* Ajuste para começar logo abaixo da terceira seção */
+    left: 0;
+    width: 100%;
+    height: auto; /* Deixe a altura ser automática para cobrir o conteúdo */
+    background-image: url('img/TESTE.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top; /* Posiciona a imagem de fundo no topo */
+    z-index: -1; /* Garante que a imagem de fundo esteja atrás do conteúdo */
+  }
+  
+  /* Estilo para a seção hero-image */
+  .hero-image {
+    position: relative;
+    text-align: left;
+  }
+  
+  /* Estilo para o texto sobreposto */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Ajuste conforme necessário */
+    transform: translateY(-50%);
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    line-height: normal;
+  }
+  
+  /* Estilo para a primeira escrita */
+  .small-text {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+  }
+  
+  /* Estilo para a palavra em negrito na primeira escrita */
+  .small-text strong {
+    font-weight: 700;
+  }
+  
+  /* Estilo para a segunda escrita */
+  .large-text {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
