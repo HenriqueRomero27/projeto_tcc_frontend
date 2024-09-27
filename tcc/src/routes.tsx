@@ -4,6 +4,7 @@ import FindPet from "./pages/FindPet/FindPet"
 import Marketplace from "./pages/Marketplace/Marketplace"
 import Login from "./pages/Login/Login"
 import Doadores from "./pages/Doadores/Doadores"
+import CreateAccountUser from "./pages/CreateAccountUser/CreateAcocuntUser"
 
 export const Routes = () => {
     return(
@@ -14,7 +15,7 @@ export const Routes = () => {
                 <Route path="/marketplace" element={<Marketplace />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/doadores" element={<Doadores />} />
-                {/* <Route path="/create-account" element={<CreateAccount />} /> */}
+                <Route path="/create-account/user" element={<CreateAccountUser />} />
             </ReactRoutes>
         </Router>
     )

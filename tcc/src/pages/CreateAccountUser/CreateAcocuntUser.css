@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #F5F5F5; /* Cor de fundo da página */
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    margin-left: 800px; /* Cria um espaço para a coluna esquerda */
+  }
+  
+  .left-column {
+    position: fixed; /* Fixa a coluna à esquerda da tela */
+    width: 800px; /* Mantém a largura da coluna esquerda */
+    height: 100vh; /* Altura total da viewport */
+    border-radius: 15px 35px 35px 15px;
+    background: #A0C1E0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0; /* Alinha a coluna totalmente à esquerda */
+    top: 0; /* Alinha a coluna ao topo da tela */
+  }
+  
+  .logo img {
+    width: 130px; /* Diminuído o tamanho do logo */
+    height: auto; /* Mantém a proporção do logo */
+    margin-top: 40px; /* Ajustado o espaçamento superior */
+  }
+  
+  .step-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Diminuído o espaço superior */
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 100%;
+  }
+  
+  .step-button {
+    display: flex;
+    align-items: center;
+    margin: 8px 0; /* Diminuído o espaço entre os botões */
+    width: 80%; /* Ajustado a largura dos botões */
+    background: #FFFFFF;
+    border-radius: 50px;
+    padding: 8px; /* Diminuído o padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .step-button img {
+    width: 40px; /* Diminuído o tamanho dos ícones */
+    height: 40px; /* Diminuído o tamanho dos ícones */
+  }
+  
+  .button-info {
+    margin-left: 15px; /* Ajustado o espaço à esquerda do texto */
+  }
+  
+  .button-info h3 {
+    margin: 0;
+    color: #000;
+    font-size: 18px; /* Diminuído o tamanho da fonte */
+    font-weight: 300;
+  }
+  
+  .button-info p {
+    margin: 0;
+    color: #000;
+    font-size: 12px; /* Diminuído o tamanho da fonte */
+    font-weight: 300;
+  }
+  
+  .divider {
+    width: 1px;
+    height: 80px; /* Diminuído a altura da divisória */
+    background: #ffffff;
+  }
+  
+  .step-button.active {
+    background: #D0E1F4; /* Cor de destaque para o botão ativo */
+  }
+  
+  .right-column {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h1 {
+    margin: 0;
+    color: #000;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .section-header p {
+    margin: 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o formulário à esquerda */
+    width: 100%;
+    padding-right: 20px; /* Adiciona um padding à direita para posicionar o formulário mais à direita */
+    box-sizing: border-box;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column; /* Alinha o label acima do campo de entrada */
+    position: relative; /* Permite o posicionamento absoluto do ícone dentro do grupo */
+    margin: 10px 0;
+    width: 100%; /* Ajusta a largura para ocupar toda a largura disponível */
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left; /* Alinha o texto do label à esquerda */
+  }
+  
+  .input-group input {
+    width: 100%; /* Ajusta a largura do campo de entrada */
+    height: 63px;
+    border-radius: 12px;
+    border: 1px solid #4A4A4A;
+    background: #FFF;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: left;
+    padding-right: 40px; /* Adiciona espaço para o ícone de edição */
+  }
+  
+  .edit-icon {
+    position: absolute; /* Posiciona o ícone dentro do campo de entrada */
+    right: 15px; /* Ajusta a posição à direita do campo de entrada */
+    top: 50%; /* Alinha verticalmente o ícone no centro do campo de entrada */
+    transform: translateY(-50%); /* Centraliza verticalmente o ícone */
+    width: 24px; /* Ajusta o tamanho do ícone */
+    height: 24px; /* Ajusta o tamanho do ícone */
+    cursor: pointer; /* Cursor de mão para indicar que é clicável */
+  }
+  
+  .edit-icon img {
+    width: 100%; /* Ajusta o ícone para preencher o contêiner */
+    height: auto; /* Mantém a proporção do ícone */
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .next-button {
+    width: 179px;
+    height: 46px;
+    border-radius: 8px;
+    background: #A0C1E0;
+    border: none;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nome-completo {
+    text-align: left;
+  }
+  
