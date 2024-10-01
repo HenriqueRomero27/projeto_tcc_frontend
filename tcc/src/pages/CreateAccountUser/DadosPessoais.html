@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left-column">
+      <div class="logo">
+        <img src="img/LOGO.png" alt="Logo">
+      </div>
+      <div class="step-buttons">
+        <div class="step-button active">
+          <img src="img/perfil.png" alt="Perfil">
+          <div class="button-info">
+            <h3><strong>Dados Pessoais</strong></h3>
+            <p>Dados Pessoais</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="step-button">
+          <img src="img/casa.png" alt="Endereço">
+          <div class="button-info">
+            <h3><strong>Endereço</strong></h3>
+            <p>Informações do seu endereço</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="step-button">
+          <img src="img/ok.png" alt="Conclusão">
+          <div class="button-info">
+            <h3><strong>Conclusão</strong></h3>
+            <p>Revisar e submeter</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="section-header">
+        <h1>Crie sua conta!</h1>
+        <p>Preencha os campos com seus dados</p>
+      </div>
+      <div class="form-container">
+        <div class="input-group">
+          <label for="nome-completo">Nome completo</label>
+          <input type="text" id="nome-completo" placeholder="Nome completo">
+        </div>
+        <div class="input-group">
+          <label for="cpf">CPF</label>
+          <input type="text" id="cpf" placeholder="CPF">
+        </div>
+        <div class="input-group">
+          <label for="telefone">Telefone</label>
+          <input type="text" id="telefone" placeholder="Telefone">
+        </div>
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="E-mail">
+        </div>
+        <div class="input-group">
+          <label for="bday">Data de Aniversário</label>
+          <input type="date" name="bday" id="bday">
+        </div>
+        <div class="button-container">
+          <button class="next-button" onclick="nextStep()">Próximo ></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function nextStep() {
+      const userData = {
+        name: document.getElementById('nome-completo').value,
+        cpf: document.getElementById('cpf').value,
+        phone: document.getElementById('telefone').value,
+        email: document.getElementById('email').value,
+        birthday: document.getElementById('bday').value,
+      };
+
+      // Salvar os dados em localStorage antes de ir para a próxima etapa
+      localStorage.setItem('userData', JSON.stringify(userData));
+      window.location.href = 'Endereco.html'; // Navegar para a próxima página
+    }
+  </script>
+</body>
+
+</html>
