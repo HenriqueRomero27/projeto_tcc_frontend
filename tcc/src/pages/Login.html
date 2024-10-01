@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./Login/Login.css">
+  <link rel="stylesheet" href="../root.css">
+</head>
+<body>
+  <body>
+    <div class="container">
+      <div class="image-container">
+        <img src="../assets/dog.svg" alt="Dog"/>
+      </div>
+      <div class="form">
+        <div class="logo-container">
+          <img src="../assets/LOGO.svg" alt="Logo" id="logo" />
+        </div>
+        <h1>Log In</h1>
+        <form id="loginForm">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required />
+          <label for="pass">Senha</label>
+          <input type="password" id="pass" name="pass" required />
+          <button type="submit" class="btnEntrar">Entrar</button>
+          <p class="or">ou</p>
+          <div class="social-buttons">
+            <button type="button" class="btnGoogle">Continuar com Google</button>
+            <button type="button" class="btnFacebook">Continuar com Facebook</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Evita o comportamento padrão de recarregar a página
+  
+        // Coletar dados do formulário
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('pass').value;
+  
+        try {
+          // Enviar requisição de login para o back-end
+          const response = await fetch('https://3000-henriquerom-backendmiau-a2xn69goooa.ws-us116.gitpod.io/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+          });
+  
+          const data = await response.json();
+  
+          if (response.ok) {
+            // Login bem-sucedido, você pode salvar o token no localStorage ou sessionStorage
+            localStorage.setItem('authToken', data.token);
+            alert('Login realizado com sucesso!');
+            
+            // Redirecionar para outra página, por exemplo, dashboard
+            window.location.href = '/dashboard.html';
+          } else {
+            // Mostrar mensagem de erro
+            alert(data.message || 'Erro ao realizar login');
+          }
+        } catch (error) {
+          console.error('Erro:', error);
+          alert('Erro ao conectar ao servidor');
+        }
+      });
+    </script>
+  </body>
+  </html>
