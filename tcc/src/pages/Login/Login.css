@@ -10,16 +10,9 @@
     align-items: center;
     height: 100vh;
     background-color: #f8f8f8;
-    padding-right: 350px;
     width: 100%;
 }
   
-/* .image-container {
-    margin-right: 20px;
-    /* width: 100%; 
-    height: 100%;
-} */
-
 img {
     height: 100vh;
 }
@@ -28,9 +21,9 @@ img {
 .form {
     background-color: #fff;
     padding: 40px 20px;
-    width: 450px;
+    width: 50%;
+    height: 100%;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,29 +42,41 @@ img {
 
 .form h1 {
     margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     color: #333;
     font-weight: 600;
     font-size: 28px;
 }
 
-.form label {
+.form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 66%;
+}
+
+.form #loginForm div .label {
     display: block;
     margin-bottom: 8px;
     color: #333;
 }
   
 .form input {
-    width: 100%;
-    padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
   
 .form button {
-    width: 100%;
-    padding: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -79,7 +84,25 @@ img {
     cursor: pointer;
     align-self: center;
 }
-  
+
+.form #loginForm div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.form #loginForm div input, .form #loginForm button, .form #loginForm div .social-buttons {
+    width: 100%;
+    padding: 10px; 
+}
+
+#createAccount {
+    color: #52433D;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .form button:hover {
     background-color: #0056b3;
 }
@@ -93,16 +116,22 @@ img {
     font-size: 16px;
     font-weight: 600;
     transition: 1s;
+    margin-bottom: 10px;
 }
 
 .form .btnEntrar:hover {
     background-color: #3C4C53;
 }
 
+.form #loginForm .cc {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .or {
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #333;
 }
   
