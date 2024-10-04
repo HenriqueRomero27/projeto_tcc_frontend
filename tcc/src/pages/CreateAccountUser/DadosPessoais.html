@@ -65,6 +65,10 @@
           <input type="email" id="email" placeholder="E-mail">
         </div>
         <div class="input-group">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" placeholder="Digite a sua senha" />
+        </div>
+        <div class="input-group">
           <label for="bday">Data de Aniversário</label>
           <input type="date" name="bday" id="bday">
         </div>
@@ -82,6 +86,7 @@
         cpf: document.getElementById('cpf').value,
         phone: document.getElementById('telefone').value,
         email: document.getElementById('email').value,
+        password: document.getElementById("password").value,
         birthday: document.getElementById('bday').value,
       };
 
