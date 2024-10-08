@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.logo {
+    width: 163px;
+    height: 33px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 55%;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc;
+    width: 80%;
+    /* Reduzindo o comprimento da linha */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+/* Seção 4 - Imagem de fundo com texto */
+.section-4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/FUNDO.svg');
+    /* Substitua pelo caminho correto */
+    background-size: cover;
+    background-position: center;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.text-overlay h1 {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 96px;
+    font-weight: 600;
+}
+
+.text-overlay button {
+    width: 546px;
+    height: 64px;
+    margin-top: 20px;
+    border-radius: 24px;
+    background: #FFE073;
+    border: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+}
+
+#banner1 {
+  width: 75%;
+}
+
+/* Seção 5 - Duas colunas de imagens e texto */
+.section-5 {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.column-1,
+.column-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* .column-1 img,
+.column-2 img {
+    width: 100%;
+    max-width: 500px;
+    /* Ajuste conforme necessário 
+    height: auto;
+} */
+
+.text-content {
+    width: 741px;
+    text-align: center;
+}
+
+.text-content p {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.text-content a {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: underline;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Seção 6 - Imagem centralizada (diminuição do tamanho) */
+.section-6 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  
+  .section-6 img {
+    width: 50%; /* Diminui o tamanho para 50% da largura do contêiner */
+    height: auto;
+    max-width: 600px; /* Máximo de 600px de largura */
+  }
+  
+/* Seção 7 - Três colunas com quadrados */
+.section-7 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+    gap: 40px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-box {
+    width: 226px;
+    height: 217px;
+    background: #B9D1E8;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box-centro {
+    width: 226px;
+    height: 217px;
+    background: #FFE073;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-box img {
+    width: 90px;
+    /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.column p {
+    width: 312px;
+    margin: 0;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Seção 8 */
+.section-8 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    padding: 20px;
+    background-image: url('img/fundo2.svg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  }
+  
+  /* Retângulo branco centralizado */
+  .content-box {
+    width: 100%;
+    border-radius: 50px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Imagem centralizada */
+  .centered-image {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  /* Duas colunas dentro do retângulo */
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  /* Coluna da esquerda (imagem) */
+  .left-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-column .side-image {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Coluna da direita (texto) */
+  .right-column {
+    flex: 1;
+    padding-left: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .right-column p {
+    width: 550px;
+    color: #000;
+    text-align: justify;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  /* Seção 9 */
+.section-9 {
+  width: 100%;
+  /* height: 965px; */
+  padding: 20px;
+  background: #FFF194;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Título */
+.title {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+/* Contêiner do vídeo */
+.video-container {
+  width: 900px;
+  height: 510px;
+}
+
+/* Vídeo */
+.video {
+  width: 100%; /* Faz o vídeo ocupar a largura do contêiner */
+  height: 100%; /* Faz o vídeo ocupar a altura do contêiner */
+  border-radius: 10px; /* Adiciona bordas arredondadas, se desejado */
+}
+  
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .adoption-title {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .adopt-button {
+    width: 242px;
+    height: 46px;
+    border-radius: 15px;
+    border: 1px solid #FFE073;
+    background-color: #FFF;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .footer-divider {
+    width: 944px;
+    height: 1px;
+    background: #6E6D6D;
+    margin: 20px 0;
+  }
+  
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 944px;
+    gap: 10px;
+  }
+  
+  .column img {
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  .column h3 {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .column p {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    color: #000;
+  }
+footer {
+  width: 100vw;
+  background: #D0E6F2;
+  border: 1px solid rgba(118, 118, 118, 0.40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.adoption-title {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.adopt-button {
+  width: 242px;
+  height: 46px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  background-color: #FFF;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.footer-divider {
+  width: 944px;
+  height: 1px;
+  background: #6E6D6D;
+  margin: 20px 0;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 944px;
+  gap: 10px;
+}
+
+.column img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.column h3 {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.column p {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
