@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.header {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo {
+    width: 163px;
+    height: 33px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 1000px;
+    max-width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 10px 0;
+    border-bottom: 2px solid #ccc; 
+    width: 80%; /* Reduzindo o comprimento da linha */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #eee;
+    border-radius: 4px;
+}
+.section1 {
+    width: 1588px;
+    height: 970px;
+    flex-shrink: 0;
+    margin: 20px auto; /* Centraliza a caixa horizontalmente */
+    margin-top: 70px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.30)
+}
+.profile-header {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.profile-header h1 {
+    font-size: 30px; /* Tamanho reduzido do título */
+    margin: 0;
+}
+
+.profile-header h2 {
+    font-size: 18px; /* Tamanho reduzido do subtítulo */
+    color: #555;
+    margin: 5px 0 0;
+}
+.header-underline {
+    width: 100%; /* Ajusta a largura da linha */
+    max-width: 1600px; /* Define o comprimento máximo da linha */
+    height: 2px;
+    background-color: #ccc;
+    margin: 40px auto 0; /* Espaçamento e centralização */
+}
+
+.vertical-box {
+    width: 371px;
+    height: 734px;
+    background-color: #eee; /* Cor de fundo da caixa vertical */
+    position: absolute; /* Posiciona a caixa dentro da box */
+    top: 300px; /* Ajuste a posição vertical conforme necessário */
+    left: 0;
+    margin-left: 200px;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: 1px solid #C8C8C8;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex; /* Usado para centralizar a imagem */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+.btn {
+    width: 90%; /* Largura dos botões */
+    padding: 10px; /* Espaçamento interno */
+    margin: 10px 0; /* Margem acima e abaixo */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid rgb(110, 108, 108); /* Borda do botão */
+    background-color: #d6d6d6; /* Cor de fundo do botão */
+    color: rgb(7, 7, 7); /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.btn:hover {
+    background-color: #8fb5dd; /* Cor do botão ao passar o mouse */
+}
+.vertical-box2 {
+    width: 1001px;
+    height: 734px;
+    background-color: #eee; /* Cor de fundo da caixa vertical */
+    position: absolute; /* Posiciona a caixa dentro da box */
+    top: 300px; /* Ajuste a posição vertical conforme necessário */
+    right: 0;
+    margin-right: 200px;
+    margin-top: 120px;
+    border-radius: 15px;
+    border: 1px solid #C8C8C8;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex; /* Usado para centralizar a imagem */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.vertical-box-img {
+    width: 222px;
+    height: 222px;
+    border-radius: 223px;
+    object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+    margin-top: 40px;
+}
+.info {
+    width: 100%; /* Garante que a seção de informações ocupe toda a largura disponível */
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    margin: 30px;
+}
+
+.info-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0 5px; /* Margem para separar os itens */
+    margin-top: 20px;
+}
+
+.info-text {
+    font-size: 20px;
+    margin: 0 0 20px; /* Margem para separar os itens */
+    margin-top: 20px;
+}
+.header-info {
+    display: flex; /* Usa flexbox para alinhar o título e o botão */
+    justify-content: space-between; /* Alinha os itens nas extremidades */
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+.header-title {
+    font-size: 27px; /* Tamanho do texto do título */
+    font-weight: bold; /* Negrito */
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.edit-button {
+    display: flex; /* Alinha o ícone e o texto horizontalmente */
+    align-items: center;
+    font-size: 16px; /* Tamanho do texto do botão */
+    font-weight: bold; /* Negrito */
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #555;
+    margin-top: 10px;
+}
+
+.edit-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+.header-line {
+    width: 95%; /* Ajusta a largura da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #ccc; /* Cor da linha */
+    border: none; /* Remove qualquer borda padrão do <hr> */
+    margin: 10px auto; /* Centraliza a linha e adiciona espaçamento vertical */
+}
+.info-form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Aumenta o espaçamento entre as linhas */
+}
+
+.full-name-group {
+    flex-grow: 2; /* Nome Completo ocupa mais espaço */
+    margin-right: 20px;
+}
+
+.nickname-group {
+    flex-grow: 1; /* Apelido ocupa menos espaço */
+}
+
+.small-group {
+    flex-grow: 1; /* Campos de CPF, Sexo e Telefone ocupam espaço igual */
+    margin-right: 20px;
+}
+
+.small-group:last-child {
+    margin-right: 0; /* Remove margem direita do último item na linha */
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px; /* Borda arredondada */
+    border: 1px solid rgba(66, 65, 65, 0.5); /* Borda preta com opacidade */
+    background: rgba(217, 217, 217, 0.21); /* Fundo com leve transparência */
+    box-sizing: border-box;
+}
+
+.form-group select {
+    height: 40px; /* Altura do select */
+}
+
+.form-group input {
+    margin-bottom: 10px; /* Espaçamento adicional entre os inputs */
+}
+/*formulario de endereço*/
+.address-form {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.address-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Espaçamento entre linhas */
+}
+
+.street-group {
+    flex-grow: 3; /* Campo da rua ocupa mais espaço */
+    margin-right: 20px;
+}
+
+.number-group {
+    flex-grow: 1; /* Número ocupa menos espaço */
+}
+
+.bairro-group {
+    flex-grow: 2; /* Bairro ocupa mais espaço */
+    margin-right: 20px;
+}
+
+.cep-group,
+.country-group {
+    flex-grow: 1; /* CEP e País ocupam o mesmo espaço */
+    margin-right: 20px;
+}
+
+.country-group:last-child {
+    margin-right: 0; /* Remove margem do último item */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px; /* Borda arredondada */
+    border: 1px solid rgba(0, 0, 0, 0.50); /* Borda preta com opacidade */
+    background: rgba(217, 217, 217, 0.21); /* Fundo com leve transparência */
+    box-sizing: border-box;
+}
+
+.vertical-box2 {
+    width: 1001px;
+    height: 734px;
+}
+
+.secondary-box {
+    width: 1588px;
+    height: 657px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #C8C8C8;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.30);
+    margin: 20px auto;
+    margin-top: 90px;
+    padding: 20px;
+    position: relative; /* Remove posicionamento absoluto */
+}
+
+.secondary-box .box-header {
+    text-align: center;
+}
+
+.user-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    background: rgba(217, 217, 217, 0.21);
+}
+/* Estilo do título na segunda box */
+.favorite-animals-header h1 {
+    font-size: 30px; /* Mesma fonte usada no título "Perfil" */
+    margin: 0;
+    margin-left: 40px; /* Alinha o título à esquerda */
+    margin-top: 45px; /* Espaçamento superior para alinhamento */
+}
+/* Estilo do carrossel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex; /* Usado para organizar os cards em linha */
+    overflow-x: auto; /* Permite que o carrossel seja rolável horizontalmente */
+    padding: 20px; /* Adiciona algum espaço interno */
+    scroll-snap-type: x mandatory; /* Permite o efeito de "snap" ao rolar */
+}
+
+.card {
+    width: 332px;
+    height: 405px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    margin-right: 40px; /* Adiciona espaço entre os cards */
+    flex-shrink: 0; /* Impede que o card encolha */
+    scroll-snap-align: start; /* Alinha o card ao início do container ao rolar */
+}
+
+.card h3 {
+    display: flex; /* Usar flexbox para alinhar o ícone e o texto */
+    align-items: center; /* Centraliza verticalmente */
+    margin: 10px 0; /* Espaçamento acima e abaixo */
+}
+
+.card h3 img {
+    margin-right: 30px; /* Espaçamento entre o ícone e o nome */
+}
+.card-img {
+    width: 332px;
+    height: 279px;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    flex-grow: 1; /* Faz o conteúdo ocupar o restante do espaço */
+}
+
+/* Ajustes de scrollbar (opcional) */
+.carousel::-webkit-scrollbar {
+    height: 8px; /* Altura da barra de rolagem */
+    width: 8px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #888; /* Cor do botão da barra de rolagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cor do botão quando o mouse passa por cima */
+}
+.footer {
+    width: 1800px;
+    height: 800px;
+    background: #FFE073;
+    border: 1px solid rgba(118, 118, 118, 0.40);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .adoption-title {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  
+  .adopt-button {
+    width: 242px;
+    height: 46px;
+    border-radius: 15px;
+    border: 1px solid #FFE073;
+    background-color: #FFF;
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .footer-divider {
+    width: 944px;
+    height: 1px;
+    background: #6E6D6D;
+    margin: 20px 0;
+  }
+  
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    max-width: 944px;
+    gap: 10px;
+  }
+  
+  .column img {
+    width: 100%;
+    max-width: 100px;
+  }
+  
+  .column h3 {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .column p {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .social-icons img {
+    width: 24px;
+    margin-right: 10px;
+  }
+  
+  .footer-bottom {
+    margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    color: #000;
+  }
+.footer {
+  width: 100%;
+  height: 512px;
+  background: #D0E6F2;
+  border: 1px solid rgba(118, 118, 118, 0.40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 120px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.adoption-title {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.adopt-button {
+  width: 242px;
+  height: 46px;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  background-color: #FFF;
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.footer-divider {
+  width: 944px;
+  height: 1px;
+  background: #6E6D6D;
+  margin: 20px 0;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  max-width: 944px;
+  gap: 10px;
+}
+
+.column img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.column h3 {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.column p {
+  color: #000;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  color: #000;
+}
+  
