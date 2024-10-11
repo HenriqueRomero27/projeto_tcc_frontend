@@ -120,7 +120,7 @@
             const fullData = { ...userData, ...addressData };
 
             // Enviar os dados para o servidor
-            fetch('https://3000-henriquerom-backendmiau-a2xn69goooa.ws-us116.gitpod.io/create-account', {
+            fetch('https://3000-henriquerom-backendmiau-ypctsaxkoc6.ws-us116.gitpod.io/create-account', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -133,7 +133,7 @@
                 alert('Cadastro realizado com sucesso!');
                 // Limpar o localStorage após o envio
                 localStorage.clear();
-                window.location.href = '../login/Login.html'; // Redirecionar para a página de login
+                window.location.href = '../Login/Login.html'; // Redirecionar para a página de login
             })
             .catch((error) => {
                 console.error('Erro:', error);

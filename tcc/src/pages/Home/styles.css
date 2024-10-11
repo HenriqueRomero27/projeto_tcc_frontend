@@ -7,7 +7,6 @@
 
 body {
   background-color: #ffffff;
-  width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +61,7 @@ body {
 
 .menu {
     padding: 10px 0;
-    border-bottom: 2px solid #ccc;
+    /* border-bottom: 2px solid #ccc; */
     width: 80%;
     /* Reduzindo o comprimento da linha */
     margin-left: auto;
@@ -95,6 +94,10 @@ body {
 .menu ul li a:hover {
     background-color: #eee;
     border-radius: 4px;
+}
+
+main {
+  width: 100%;
 }
 
 /* Seção 4 - Imagem de fundo com texto */
@@ -138,14 +141,18 @@ body {
 }
 
 #banner1 {
-  width: 75%;
+  width: 65%;
 }
 
 /* Seção 5 - Duas colunas de imagens e texto */
 .section-5 {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
 }
 
 .column-1,
@@ -447,7 +454,7 @@ body {
     color: #000;
   }
 footer {
-  width: 100vw;
+  width: 100%;
   background: #D0E6F2;
   border: 1px solid rgba(118, 118, 118, 0.40);
   display: flex;

@@ -1,37 +1,103 @@
-import React from 'react';
-import './Login.css';
-import '../../root.css';
-import Dog from '../../assets/dog.svg';
-import Logo from '../../assets/LOGO.svg';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import './Login.css'; // Certifique-se de que o CSS está correto
+import logo from '../../assets/LOGO.svg';
+import dogImage from '../../assets/dog.svg';
 
-function Login() {
+const Login: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault(); // Evita o comportamento padrão de recarregar a página
+
+    try {
+      // Enviar requisição de login para o back-end
+      const response = await fetch('https://3000-henriquerom-backendmiau-ypctsaxkoc6.ws-us116.gitpod.io/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Login bem-sucedido, você pode salvar o token no localStorage ou sessionStorage
+        localStorage.setItem('authToken', data.token);
+        alert('Login realizado com sucesso!');
+
+        // Redirecionar para outra página, por exemplo, dashboard
+        window.location.href = '../Home/Home.html'; // Substitua pelo caminho correto
+      } else {
+        // Mostrar mensagem de erro
+        alert(data.message || 'Erro ao realizar login');
+      }
+    } catch (error) {
+      console.error('Erro:', error);
+      alert('Erro ao conectar ao servidor');
+    }
+  };
+
+  const handleCreateAccount = () => {
+    window.location.href = '../CreateAccountUser/DadosPessoais.html'; // Substitua pelo caminho correto
+  };
+
   return (
     <div className="container">
       <div className="image-container">
-        <img src={Dog} alt="Dog"/>
+        <img src={dogImage} alt="Dog" />
       </div>
       <div className="form">
         <div className="logo-container">
-          <img src={Logo} alt="Logo" id="logo" />
+          <img src={logo} alt="Logo" id="logo" />
         </div>
         <h1>Log In</h1>
-        <form>
-          <label htmlFor="email">E-mail</label>
-          <input type="email" id="email" name="email" />
-          <label htmlFor="pass">Senha</label>
-          <input type="password" id="pass" name="pass" />
-          <button className="btnEntrar">Entrar</button>
-          <p className="or">ou</p>
-          <div className="social-buttons">
-            <button className="btnGoogle">Continuar com Google</button>
-            <button className="btnFacebook">Continuar com Facebook</button>
+        <form id="loginForm" onSubmit={handleLogin}>
+          <div>
+            <div className="label">
+              <label htmlFor="email">E-mail</label>
+            </div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </div>
-          <p className="create-account">Ainda não tem uma conta?<span className="emphasis"><Link to="/create-account"> Crie uma agora</Link></span></p>
+          <div>
+            <div className="label">
+              <label htmlFor="pass">Senha</label>
+            </div>
+            <input
+              type="password"
+              id="pass"
+              name="pass"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btnEntrar">Entrar</button>
+          <div className="cc">
+            <p id="createAccountText">
+              Ainda não possui uma conta?{' '}
+              <span id="createAccount" onClick={handleCreateAccount} style={{ cursor: 'pointer', color: 'blue' }}>
+                Crie agora!
+              </span>
+            </p>
+          </div>
+          <p className="or">ou entre com</p>
+          <div className="social-buttons">
+            <button type="button" className="btnGoogle">Continuar com Google</button>
+            <button type="button" className="btnFacebook">Continuar com Facebook</button>
+          </div>
         </form>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
