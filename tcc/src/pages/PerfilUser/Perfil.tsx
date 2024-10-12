@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { jwtDecode } from 'jwt-decode';
+import * as jwt_decode from 'jwt-decode';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import "./style.css"
 
 // Defina uma interface para os dados do usuário
 interface UserData {
@@ -24,45 +27,51 @@ const Perfil: React.FC = () => {
 
   // Função para obter o ID do usuário a partir do token
   const getUserIdFromToken = () => {
-    const token = localStorage.getItem('token');
+    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTHVpcyBIZW5yaXF1ZSBCdWVubyBSb21lcm8iLCJlbWFpbCI6Imx1aXNoZW5yaXF1ZWJ1ZW5vcm9tZXJvQGdtYWlsLmNvbSIsImlhdCI6MTcyODczNTIxNywiZXhwIjoxNzMxMzI3MjE3LCJzdWIiOiIzZTNiYTdhZi1kNTFlLTQ0NDQtODJkNS1iMjViZDhhNjY1YjcifQ.YGSJDpzkygCnDMcM7kqwIQiAN4pVTcN4kPRtf_YvZEE";
     if (!token) {
-      // Redirecionar para o login se não houver token
-      window.location.href = '/login';
+      alert("Não foi encontrado o token");
       return null;
     }
 
     try {
-      const decodedToken = jwtDecode(token); // Decodificar o JWT
+      const decodedToken = jwt_decode<{ sub: string }>(token); // Decodificar o JWT corretamente
       return decodedToken.sub;
     } catch (error) {
       console.error('Erro ao decodificar o token', error);
-      window.location.href = '/login';
       return null;
     }
   };
+
+  const userId = getUserIdFromToken(); // Obter o ID do usuário a partir do token
 
   // Função para buscar os dados do usuário
   const fetchUserData = async (userId: string) => {
     try {
       const response = await fetch(`https://3000-henriquerom-backendmiau-ypctsaxkoc6.ws-us116.gitpod.io/users/${userId}`);
-      const data: UserData = await response.json();
+
+      if (!response.ok) {
+        throw new Error('Erro ao buscar dados do usuário');
+      }
+
+      const data = await response.json();
       setUserData(data);
     } catch (error) {
       console.error('Erro ao buscar dados do usuário:', error);
+      alert('Erro ao buscar dados do usuário');
     }
   };
 
+  // useEffect para buscar os dados ao carregar a página
   useEffect(() => {
-    const userId = getUserIdFromToken();
     if (userId) {
       fetchUserData(userId);
     }
-  }, []);
+  }, [userId]);
 
   // Função para atualizar os dados do usuário no backend
   const handleSave = async () => {
     try {
-      const response = await fetch(`https://3000-henriquerom-backendmiau-ypctsaxkoc6.ws-us116.gitpod.io/users/${userData?.id}`, {
+      const response = await fetch(`https://3000-henriquerom-backendmiau-ypctsaxkoc6.ws-us116.gitpod.io/users/${userId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -94,9 +103,10 @@ const Perfil: React.FC = () => {
     }));
   };
 
-  
+
   return (
-    <div>
+    <div className='container'>
+      <Header />
       <h1>Perfil</h1>
       {userData ? (
         <div>
@@ -244,6 +254,7 @@ const Perfil: React.FC = () => {
       ) : (
         <p>Carregando dados...</p>
       )}
+      <Footer />
     </div>
   );
 };

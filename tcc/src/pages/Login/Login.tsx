@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Certifique-se de que o CSS está correto
+import "../../root.css"
 import logo from '../../assets/LOGO.svg';
 import dogImage from '../../assets/dog.svg';
+import Perfil from '../PerfilUser/Perfil';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   const handleLogin = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Evita o comportamento padrão de recarregar a página
@@ -26,9 +30,8 @@ const Login: React.FC = () => {
         // Login bem-sucedido, você pode salvar o token no localStorage ou sessionStorage
         localStorage.setItem('authToken', data.token);
         alert('Login realizado com sucesso!');
-
-        // Redirecionar para outra página, por exemplo, dashboard
-        window.location.href = '../Home/Home.html'; // Substitua pelo caminho correto
+        navigate("/perfil")
+         
       } else {
         // Mostrar mensagem de erro
         alert(data.message || 'Erro ao realizar login');

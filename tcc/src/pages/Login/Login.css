@@ -178,6 +178,7 @@ img {
 
 Link {
     text-decoration: none;
+    color: #52433D;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

@@ -17,7 +17,7 @@ export const Routes = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/doadores" element={<Doadores />} />
                 <Route path="/create-account/user" element={<CreateAccountUser />} />
-                <Route path="/users/:userId" element={<Perfil />} />
+                <Route path="/perfil" element={<Perfil />} />
             </ReactRoutes>
         </Router>
     )
